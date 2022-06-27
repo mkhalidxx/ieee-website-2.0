@@ -1,6 +1,27 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+/* @type {import('next').NextConfig} */
+// const nextConfig = {
+// }
 
-module.exports = nextConfig
+const { i18n } = require("./next-i18next.config.js");
+
+module.exports = {
+  images: {
+    domains: [
+      "images.unsplash.com",
+      "ik.imagekit.io",
+      "source.unsplash.com",
+      "firebasestorage.googleapis.com",
+      "localhost",
+    ],
+  },
+  reactStrictMode: true,
+  i18n,
+};
+
+// const nextTranslate = require("next-translate");
+
+// module.exports = nextTranslate({
+//   reactStrictMode: true,
+// });
+
+// module.exports = nextConfig
